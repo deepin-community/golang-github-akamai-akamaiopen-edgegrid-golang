@@ -1,0 +1,44 @@
+From: =?utf-8?q?F=C3=A9lix_Sipma?= <felix+debian@gueux.org>
+Date: Tue, 12 Jan 2021 16:53:23 +0100
+Subject: disable tests which need network access
+
+---
+ client-v1/client_test.go | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/client-v1/client_test.go b/client-v1/client_test.go
+index 4a2a369..6ff6668 100644
+--- a/client-v1/client_test.go
++++ b/client-v1/client_test.go
+@@ -10,6 +10,7 @@ import (
+ )
+ 
+ func TestNewRequest(t *testing.T) {
++	t.Skip("DM-Skipped")
+ 	config := edgegrid.Config{
+ 		Host:         "https://httpbin.org",
+ 		AccessToken:  "local-config",
+@@ -25,6 +26,7 @@ func TestNewRequest(t *testing.T) {
+ }
+ 
+ func TestNewRequestWithSwitchedAccount(t *testing.T) {
++	t.Skip("DM-Skipped")
+ 	config := edgegrid.Config{
+ 		Host:         "https://httpbin.org",
+ 		AccessToken:  "local-config",
+@@ -41,6 +43,7 @@ func TestNewRequestWithSwitchedAccount(t *testing.T) {
+ }
+ 
+ func TestNewJSONRequest(t *testing.T) {
++	t.Skip("DM-Skipped")
+ 	config := edgegrid.Config{
+ 		Host:         "https://httpbin.org",
+ 		AccessToken:  "local-config",
+@@ -56,6 +59,7 @@ func TestNewJSONRequest(t *testing.T) {
+ }
+ 
+ func TestNewJSONRequestWithSwitchedAccount(t *testing.T) {
++	t.Skip("DM-Skipped")
+ 	config := edgegrid.Config{
+ 		Host:         "https://httpbin.org",
+ 		AccessToken:  "local-config",

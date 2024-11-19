@@ -1,5 +1,16 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-akamai-akamaiopen-edgegrid-golang (1.0.1-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream release
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Drop unused golang-github-h2non-parth-dev Depends
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 20 Jan 2021 01:49:25 +0800
+
+golang-github-akamai-akamaiopen-edgegrid-golang (1.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #975346)
+  * minor typo in copyright
+  * add patch to disable tests which need network access
+
+ -- Félix Sipma <felix+debian@gueux.org>  Tue, 12 Jan 2021 16:55:01 +0100

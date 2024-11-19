@@ -1,15 +1,41 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-akamai-akamaiopen-edgegrid-golang
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Félix Sipma <felix+debian@gueux.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-google-go-querystring-dev,
+               golang-github-google-uuid-dev,
+               golang-github-mitchellh-go-homedir-dev,
+               golang-github-patrickmn-go-cache-dev,
+               golang-github-sirupsen-logrus-dev,
+               golang-github-stretchr-testify-dev,
+               golang-github-xeipuuv-gojsonschema-dev,
+               golang-gopkg-h2non-gock.v1-dev,
+               golang-gopkg-ini.v1-dev,
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-akamai-akamaiopen-edgegrid-golang
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-akamai-akamaiopen-edgegrid-golang.git
+Homepage: https://github.com/akamai/AkamaiOPEN-edgegrid-golang
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/akamai/AkamaiOPEN-edgegrid-golang
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-akamai-akamaiopen-edgegrid-golang-dev
+Architecture: all
+Depends: golang-github-google-go-querystring-dev,
+         golang-github-google-uuid-dev,
+         golang-github-mitchellh-go-homedir-dev,
+         golang-github-patrickmn-go-cache-dev,
+         golang-github-sirupsen-logrus-dev,
+         golang-github-xeipuuv-gojsonschema-dev,
+         golang-gopkg-ini.v1-dev,
+         ${misc:Depends},
+Description: Authentication handler for the Akamai OPEN EdgeGrid Authentication scheme
+ This library implements an Authentication handler
+ for net/http (https://golang.org/pkg/net/http/)
+ that provides the Akamai OPEN Edgegrid Authentication
+ (https://developer.akamai.com/introduction/Client_Auth.html)
+ scheme.
