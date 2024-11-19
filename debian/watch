@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%golang-github-akamai-akamaiopen-edgegrid-golang-$1.tar.gz%,\
+      uversionmangle=s/(\d)[_\.\-\+]?(RC|rc|pre|dev|beta|alpha)[.]?(\d*)$/\$1~\$2\$3/" \
+  https://github.com/akamai/AkamaiOPEN-edgegrid-golang/tags .*/v?(1\.\d\S*)\.tar\.gz debian
